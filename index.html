@@ -1,5 +1,39 @@
-<h1>Welcome to Intromine!</h1>
-<br><h2>This page is under construction.</h2>
-<br><h3>This is a clicker game.</h3>
-<br><h4>It is about clicking a grass block and getting upgrades.</h4>
-<br><img src="https://preview.redd.it/tried-making-a-minecraft-grass-block-i-would-appreciate-v0-8h9xotnr2vm71.png?width=1080&crop=smart&auto=webp&s=ad395fa968629933b4ea15f2f7dd823ea4aabfe5" height="250">
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#4169e1">
+	<title>Intromine</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<main class="game">
+		<header class="intro">
+			<p class="eyebrow">A little block-breaking game</p>
+			<h1>Welcome to Intromine!</h1>
+			<p class="instructions">Click the grass block to mine. Rebirth to reset your score and boost each run.</p>
+		</header>
+
+		<section class="play-area" aria-label="Clicker game">
+			<button class="block-button" id="mine-button" type="button" aria-label="Mine the grass block">
+				<img
+					class="grass-block"
+					src="https://preview.redd.it/tried-making-a-minecraft-grass-block-i-would-appreciate-v0-8h9xotnr2vm71.png?width=1080&crop=smart&auto=webp&s=ad395fa968629933b4ea15f2f7dd823ea4aabfe5"
+					alt="A pixel-art grass block"
+				>
+			</button>
+
+			<div class="score-panel" aria-label="Game stats">
+				<p class="score-label">Blocks mined</p>
+				<p class="score" id="counter" aria-live="polite">0</p>
+				<p class="stat">Rebirths <span id="rebirth-count">0</span> / 8</p>
+				<p class="stat">Next run starts at <span id="multiplier">1</span></p>
+				<button class="rebirth-button" id="rebirth-button" type="button">Rebirth</button>
+				<p class="status" id="status" aria-live="polite">Your first block is waiting.</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
